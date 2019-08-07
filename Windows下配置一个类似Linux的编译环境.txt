@@ -1,0 +1,6 @@
+·安装TDM-GCC-64
+·安装(解压)msys到TDM-GCC的安装目录中
+·将call "C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Auxiliary\Build\vcvars32.bat"加到msys.bat的第一行中
+·复制yasm-1.3.0-win64.exe(重命名为yasm.exe)到msys的bin目录下
+·重命名msys的bin目录下的link.exe(linkold.exe)
+·运行msys.bat，进入到ffmpeg源码，执行编译命令
