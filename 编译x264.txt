@@ -1,0 +1,3 @@
+./configure --prefix=./output32 --enable-shared --enable-static --host=mingw32 --extra-cflags="-DNO_PREFIX"
+make -j8
+make install
