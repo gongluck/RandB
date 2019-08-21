@@ -1,0 +1,9 @@
+./configure --prefix=./msvc2019_32_shared --target-os=win32 --arch=x86 --toolchain=msvc --disable-static --enable-shared
+
+x264加上:
+--enable-gpl --enable-libx264 \
+--extra-cflags="-I../x264-snapshot-20190801-2245-stable/output32/include" --extra-ldflags="-LIBPATH:../x264-snapshot-20190801-2245-stable/output32/lib"
+
+
+make -j8
+make install
