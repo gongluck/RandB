@@ -1,3 +1,7 @@
-./configure --prefix=./output32 --enable-shared --enable-static --host=mingw32 --extra-cflags="-DNO_PREFIX"
+/*****
+CC=cl 能生成*.lib
+*****/
+
+CC=cl ./configure --prefix=./output32 --enable-shared --enable-static --host=mingw32 --extra-cflags="-DNO_PREFIX"
 make -j8
 make install
