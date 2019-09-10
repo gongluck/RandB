@@ -1,0 +1,1 @@
+export LD_LIBRARY_PATH=[添加路径]:$LD_LIBRARY_PATH

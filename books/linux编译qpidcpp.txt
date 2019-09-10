@@ -1,0 +1,15 @@
+yum install cmake boost-devel libuuid-devel pkgconfig gcc-c++ make ruby help2man doxygen graphviz
+yum install cyrus-sasl-devel cyrus-sasl-md5 cyrus-sasl-plain nss-devel nspr-devel
+yum install xqilla-devel xerces-c-devel
+yum install libibverbs-devel librdmacm-devel
+yum install ruby ruby-devel swig
+yum install libdb-cxx-devel libaio-devel
+
+cd [源码目录]
+mkdir bld
+cd bld
+cmake -DCMAKE_INSTALL_PREFIX=./install ..
+make all
+make test
+make install
+#make uninstall

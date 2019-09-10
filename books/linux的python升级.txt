@@ -1,0 +1,50 @@
+1.安装Development Tools
+yum groupinstall -y 'development tools'
+
+2安装SSL、bz2、zlib来为Python的安装做好准备工作
+yum install -y zlib-devel bzip2-devel openssl-devel xz-libs wget
+
+
+安装：
+
+1.查看当前系统的Python Version
+python --version
+
+2.下载Python-2.7.9
+wget https://www.python.org/ftp/python/2.7.9/Python-2.7.9.tar.xz
+
+3.安装Python
+a. 解压
+tar -Jxvf Python-2.7.9.tar.xz -C /usr/src/
+b. 安装
+mkdir /usr/local/python27
+cd /usr/src/Python-2.7.9/
+./configure --prefix=/usr/local/python27 && make && make install
+c. 将系统python指令默认指向Python-2.7.9版本
+CentOS6.5中YUM需要Python-2.6.6支持，所以不建议卸载老版本。
+mv /usr/bin/python /usr/bin/python266
+ln -s /usr/local/python27/bin/python2.7 /usr/bin/python
+python --version 
+
+
+解决YUM与Python2.7.9的兼容问题
+因为YUM需要python-2.6.6的支持，CentOS 6.5中YUM却不兼容Python-2.7，导致YUM不可用。需要在YUM的配置文件中，重新使YUM指向Python-2.6.6的执行程序(即CentOS 6.5 原始的/usr/bin/python程序)
+vim /usr/bin/yum
+将原来的：
+#！/usr/bin/python
+改为：
+#!/usr/bin/python266
+
+一般来说这样就可以恢复使用YUM，同理所有在CentOS 6.5中对Python-2.7不兼容的软件都可以使用上面的方法来解决。
+
+如果上述步骤执行完后仍不能有效的执行YUN指令，可以尝试下面的解决方法。
+将CentOS 6.5的安装光盘或ISO文件中的以下rpm包(版本根据个人情况)拷贝到系统目录中。
+mount /dev/cdrom /mnt/cdrom
+cd /mnt/cdrom/Packages
+cp yum-3.2.29-40.el6.centos.noarch.rpm \
+python-2.6.6-51.el6.x86_64.rpm \
+python-urlgrabber-3.9.1-9.el6.noarch.rpm \
+python-devel-2.6.6-51.el6.x86_64.rpm \
+python-libs-2.6.6-51.el6.x86_64.rpm /usr/local/python27
+cd /usr/local/python27
+rpm -Uvh --replacepkgs *.rpm
