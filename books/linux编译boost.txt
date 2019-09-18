@@ -1,0 +1,3 @@
+./bootstrap.sh
+./b2
+./b2 install --prefix=[安装目录]
