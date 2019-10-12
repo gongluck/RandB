@@ -1,0 +1,9 @@
+## 设备列表
+.\ffmpeg.exe -list_devices true -f dshow -i dummy
+
+## 播放
+.\ffplay.exe -f dshow video="e2eSoft VCam"
+
+## 录屏
+.\ffmpeg.exe -f gdigrab -i desktop -vcodec h264_qsv -b:v 2000k -video_size 1920x1080 -r 30 save.mp4
+.\ffmpeg.exe -f dshow -i video="e2eSoft VCam" -vcodec h264_qsv -b:v 2000k -video_size 640x480 save.mp4
