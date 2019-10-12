@@ -1,0 +1,57 @@
+## 创建新仓库
+git init
+
+## 检出
+git clone https://github.com/gongluck/RandB.git
+
+## 添加(到index)
+git add *
+git add <filename>
+
+## 提交(到head)
+git commit -m "代码提交信息"
+
+## 推送
+git push origin master
+
+## 创建分支
+git checkout -b <branch>
+
+## 切换分支
+git checkout master
+
+## 删除分支
+git branch -d <branch>
+
+## 推送分支
+git push origin <branch>
+git push origin HEAD --force
+
+## 更新
+git pull
+
+## 合并
+git merge <branch>
+
+## 预览差异
+git diff <sbranch> <tbranch>
+git diff 可以查看当前没有add的内容修改(不在缓冲区的文件变化)
+git diff --cached查看已经add但没有commit的改动(在缓冲区的文件变化)
+git diff HEAD 是上面两条命令的合并
+
+## 修改日志
+git log --graph --oneline --decorate --all
+git log --name-status
+
+## 打标签
+git tag 1.0.0 1b2e1d63ff
+git push origin 1.0.0
+
+## 回滚
+git reset --hard HEAD^
+git reset --hard HEAD~n
+git reset --hard <sha>
+
+## 撤销改动
+git fetch origin
+git reset --hard origin/master
