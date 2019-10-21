@@ -1,0 +1,9 @@
+## 账号管理
+useradd	testuser	创建用户testuser
+passwd	testuser	给已创建的用户testuser设置密码
+usermod --help		修改用户这个命令的相关参数
+userdel	testuser	删除用户testuser
+rm -rf	testuser	删除用户testuser所在目录
+su	用户名			用户切换
+groupadd testgroup	组的添加
+groupdel testgroup	组的删除
