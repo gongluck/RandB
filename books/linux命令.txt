@@ -15,3 +15,7 @@ vi /etc/sudoers
 	root    ALL=(ALL)       ALL
 	user    ALL=(ALL)       ALL
 chmod 440 /etc/sudoers
+
+## 解压
+tar -xzvf *.tar.gz
+tar -xjvf *.bz
