@@ -7,3 +7,11 @@ rm -rf	testuser	删除用户testuser所在目录
 su	用户名			用户切换
 groupadd testgroup	组的添加
 groupdel testgroup	组的删除
+
+## 添加管理员权限
+su root
+chmod 777 /etc/sudoers
+vi /etc/sudoers
+	root    ALL=(ALL)       ALL
+	user    ALL=(ALL)       ALL
+chmod 440 /etc/sudoers
