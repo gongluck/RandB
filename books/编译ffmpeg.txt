@@ -7,7 +7,6 @@ make -j8
 make install
 
 ## liunx
-sudo ./configure --enable-shared --enable-static --enable-libx264 --enable-gpl --disable-x86asm --prefix=../FFmpeg --extra-cflags="-I../libx264/include" --extra-ldflags="-L../libx264/lib -lx264"
-#config.mak文件HOSTCFLAGS加上-fPIC
+sudo ./configure --enable-shared --enable-static --enable-libx264 --enable-gpl --disable-x86asm --prefix=../FFmpeg --extra-cflags="-I../libx264/include -fPIC" --extra-ldflags="-L../libx264/lib -lx264 -ldl"
 sudo make -j4
 sudo make install

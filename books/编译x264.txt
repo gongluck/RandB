@@ -5,6 +5,6 @@ make -j8
 make install
 
 ## linux
-sudo ./configure --eanble-shared --enable-static --disable-asm --prefix=../libx264
+sudo ./configure --eanble-shared --enable-static --disable-asm --prefix=../libx264 --extra-cflags="-fPIC"
 sudo make
 sudo make install
