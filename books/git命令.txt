@@ -55,3 +55,7 @@ git reset --hard <sha>
 ## 撤销改动
 git fetch origin
 git reset --hard origin/master
+
+## 撤销提交
+git reset --hard <commit_id>
+git push origin HEAD --force
