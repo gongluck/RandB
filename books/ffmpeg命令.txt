@@ -3,6 +3,7 @@
 
 ## 播放
 .\ffplay.exe -f dshow video="e2eSoft VCam"
+.\ffplay.exe -ar 44100 -ac 2 -f f32le save.pcm
 
 ## 录屏
 .\ffmpeg.exe -f gdigrab -i desktop -vcodec h264_qsv -b:v 2000k -video_size 1920x1080 -r 30 save.mp4
