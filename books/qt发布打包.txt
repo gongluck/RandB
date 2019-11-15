@@ -1,1 +1,3 @@
 windeployqt.exe --release --qmldir qmldir qtapp.exe
+
+有时需要手动复制对应的Qt5Core.dll(即使windeployqt有打包这个文件)、Qt5QuickControls2.dll、Qt5QuickTemplates2.dll
