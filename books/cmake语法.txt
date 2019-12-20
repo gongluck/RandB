@@ -1,0 +1,20 @@
+##添加宏
+add_definitions(-D_ANDROID -DMG_ENABLE_CALLBACK_USERDATA)
+
+##设置变量
+SET(EXTERNAL_LIB_ROOT ./src/main/cpp/ExternalLibraries)
+
+##包含目录
+include_directories( $ENV{BOOST_INCLUDE})
+
+##链接目录
+link_directories($ENV{BOOST_LIB_ANDROID})
+
+##链接库
+link_libraries(boost_system)
+
+##查找指定目录下的所有源文件，然后将结果存进指定变量名
+aux_source_directory( ./src/main/cpp NATIVE_SRC )
+
+##追加
+list(APPEND NATIVE_SRC ${RTC_BASE1})
