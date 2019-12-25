@@ -1,0 +1,24 @@
+环境:
+1、ruby
+2、perl
+3、python
+4、jom
+5、vs
+
+根据qtbase\mkspecs\win32-msvc\qmake.conf内容找到qtbase\mkspecs\common\msvc-desktop.conf
+按需修改
+QMAKE_CFLAGS_RELEASE = $$QMAKE_CFLAGS_OPTIMIZE -MD 
+QMAKE_CFLAGS_RELEASE_WITH_DEBUGINFO += $$QMAKE_CFLAGS_OPTIMIZE -Zi -MD 
+QMAKE_CFLAGS_DEBUG = -Zi -MDd
+的-MD/-MDd
+为-MT/-MTd
+
+命令:
+configure.bat -h
+configure.bat -mp -prefix "..\msvc2019_32_shared" -opensource -nomake tests -no-compile-examples -nomake examples -debug-and-release -shared
+configure.bat -mp -prefix "..\msvc2019_32_static" -opensource -nomake tests -no-compile-examples -nomake examples -debug-and-release -static
+jom
+jom install
+
+vs项目环境配置:
+qt vs tools
