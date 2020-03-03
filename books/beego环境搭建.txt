@@ -6,3 +6,4 @@ go get github.com/beego/bee
 #Windows:
 	$Path += %GOPATH%\bin
 bee new beegotest
+bee run
