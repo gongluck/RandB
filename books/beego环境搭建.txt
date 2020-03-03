@@ -1,0 +1,8 @@
+go get github.com/astaxie/beego
+go get github.com/beego/bee
+#Linux:
+	echo 'export PATH="$GOPATH/bin:$PATH"' >> ~/.bashrc 
+	source ~/.bashrc 
+#Windows:
+	$Path += %GOPATH%\bin
+bee new beegotest
