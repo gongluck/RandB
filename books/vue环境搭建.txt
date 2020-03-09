@@ -1,0 +1,6 @@
+下载安装nodejs
+npm install -g @vue/cli
+vue create vuetest
+cd vuetest
+vue add element
+npm run serve
