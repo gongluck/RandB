@@ -1,0 +1,63 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: Graphic - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating command line "rc.exe /l 0x804 /fo"Debug/Graphic.res" /d "_DEBUG" /d "_AFXDLL" "H:\VC讲座资料\VC书\正式\VC++深入编程code\Chapter10\Graphic\Graphic.rc"" 
+Creating temporary file "D:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSPA1.tmp" with contents
+[
+/nologo /MDd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_AFXDLL" /D "_MBCS" /FR"Debug/" /Fp"Debug/Graphic.pch" /Yu"stdafx.h" /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"H:\VC讲座资料\VC书\正式\VC++深入编程code\Chapter10\Graphic\Graphic.cpp"
+"H:\VC讲座资料\VC书\正式\VC++深入编程code\Chapter10\Graphic\GraphicDoc.cpp"
+"H:\VC讲座资料\VC书\正式\VC++深入编程code\Chapter10\Graphic\GraphicView.cpp"
+"H:\VC讲座资料\VC书\正式\VC++深入编程code\Chapter10\Graphic\MainFrm.cpp"
+"H:\VC讲座资料\VC书\正式\VC++深入编程code\Chapter10\Graphic\SettingDlg.cpp"
+"H:\VC讲座资料\VC书\正式\VC++深入编程code\Chapter10\Graphic\TestBtn.cpp"
+"H:\VC讲座资料\VC书\正式\VC++深入编程code\Chapter10\Graphic\SXBtn.cpp"
+]
+Creating command line "cl.exe @D:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSPA1.tmp" 
+Creating temporary file "D:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSPA2.tmp" with contents
+[
+/nologo /MDd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_WINDOWS" /D "_AFXDLL" /D "_MBCS" /FR"Debug/" /Fp"Debug/Graphic.pch" /Yc"stdafx.h" /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"H:\VC讲座资料\VC书\正式\VC++深入编程code\Chapter10\Graphic\StdAfx.cpp"
+]
+Creating command line "cl.exe @D:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSPA2.tmp" 
+Creating temporary file "D:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSPA3.tmp" with contents
+[
+/nologo /subsystem:windows /incremental:yes /pdb:"Debug/Graphic.pdb" /debug /machine:I386 /out:"Debug/Graphic.exe" /pdbtype:sept 
+".\Debug\Graphic.obj"
+".\Debug\GraphicDoc.obj"
+".\Debug\GraphicView.obj"
+".\Debug\MainFrm.obj"
+".\Debug\SettingDlg.obj"
+".\Debug\StdAfx.obj"
+".\Debug\TestBtn.obj"
+".\Debug\Graphic.res"
+".\Debug\SXBtn.obj"
+]
+Creating command line "link.exe @D:\DOCUME~1\ADMINI~1\LOCALS~1\Temp\RSPA3.tmp"
+<h3>Output Window</h3>
+Compiling resources...
+Compiling...
+StdAfx.cpp
+Compiling...
+Graphic.cpp
+GraphicDoc.cpp
+GraphicView.cpp
+MainFrm.cpp
+SettingDlg.cpp
+TestBtn.cpp
+SXBtn.cpp
+Generating Code...
+Linking...
+
+
+
+<h3>Results</h3>
+Graphic.exe - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>
