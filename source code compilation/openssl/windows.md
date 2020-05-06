@@ -15,5 +15,6 @@ perl Configure VC-WIN64A no-asm --prefix="output/x64/release"
 ms\do_win64a
 
 # 动态库
+nmake -f ms\ntdll.mak
 nmake -f ms\ntdll.mak test
 nmake -f ms\ntdll.mak install
