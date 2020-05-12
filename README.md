@@ -19,6 +19,7 @@
     nasm
     navicat
     Ngrok
+    NSIS
     OpenCppCoverage
     PanDownload
     pexports
@@ -41,7 +42,7 @@
     xmanager
     yasm
     YUVPlayer
-    
+
 ## [books](https://github.com/gongluck/RandB/tree/master/books)
 ### -存放电子书或者笔记/书籍代码
 ## [code](https://github.com/gongluck/RandB/tree/master/code)
