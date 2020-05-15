@@ -5,6 +5,7 @@
 ## [binary](https://github.com/gongluck/RandB/tree/master/binary)
 ### -存放可运行程序或者压缩包
     BiliBili视频下载工具
+	clang
     cmake
     darwin
     depends
