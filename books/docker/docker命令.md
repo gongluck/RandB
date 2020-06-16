@@ -5,6 +5,18 @@
 ```shell
 yum update
 yum install docker
+windows安装Docker Desktop Installer.exe
+```
+
+## ~~WSL安装dockr~~
+
+```shell
+sudo apt-get install apt-transport-https ca-certificates curl software-properties-common
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
+sudo apt-get update
+sudo apt-get install docker-ce
+docker --version
 ```
 
 ## 查看docker状态
@@ -68,6 +80,7 @@ docker kill [容器名/容器ID]
 
 ```shell
 docker rm [容器名/容器ID]
+docker rm $(docker ps -a -q)
 ```
 
 ## 列出镜像
@@ -80,5 +93,24 @@ docker images
 
 ```shell
 docker pull [镜像名]
+```
+
+## 构建镜像
+
+```shell
+docker build -t [镜像名] [包含Dockerfile的目录]
+```
+
+## 推送镜像
+
+```shell
+docker push [镜像名]
+```
+
+## 删除本地镜像
+
+```shell
+docker rmi [镜像名]
+docker rmi $(docker images --filter “dangling=true” -q --no-trunc)
 ```
 
